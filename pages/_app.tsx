@@ -11,12 +11,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </div>
       <div className="mb-auto w-full">
-        <img
-          className="mb-3 mx-auto"
-          src="/andrea-montanaro.svg"
-          height="50"
-          width="300"
-        />
+        <a href="mailto:andrea@andreamontanaro.it" title="Restiamo in contatto">
+          <img
+            className="mb-3 mx-auto"
+            src="/andrea-montanaro.svg"
+            height="50"
+            width="300"
+          />
+        </a>
       </div>
     </div>
   );
