@@ -6,13 +6,13 @@ export default function useSaves() {
 
   useEffect(() => {
     let localData = localStorage.getItem("saves");
-    if (localData) {
+    if (localData && localData.length > 0) {
       setSaves(JSON.parse(localData));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("saves", JSON.stringify(saves));
+    if (saves.length > 0) localStorage.setItem("saves", JSON.stringify(saves));
   }, [saves]);
 
   const add = (calculation: Calculation) => {
